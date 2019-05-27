@@ -27,7 +27,21 @@
         
     </style>
 
+
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+
+    <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
+
+   <script>
+   $(function(){
+       var sf = new Snowflakes({
+           color: "#ffffff",
+           count: 75,
+           minOpacity: 0.2,
+           maxOpacity: 0.6
+       });
+   });
+   </script>
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -119,7 +133,7 @@
         <div class="logo-name">DUAN2PING</div>
         <div class="logo-desc">
             
-            My life
+            愿寻一山水间，看水听风随流水，再无凡尘乱我心。
             
         </div>
     </div>
@@ -253,63 +267,9 @@
 
 </header>
 
-
-<style>
-    .carousel-control {
-        width: 45px;
-        height: 45px;
-        line-height: 55px;
-        border-radius: 45px;
-        background: transparent;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-    #prev-cover {
-        position: absolute;
-        top: 48%;
-        left: 8px;
-    }
-
-    #next-cover {
-        position: absolute;
-        top: 48%;
-        right: 8px;;
-    }
-
-    #prev-cover i {
-        margin-right: 3px;
-    }
-
-    #next-cover i {
-        margin-left: 3px;
-    }
-
-    .carousel-control:hover {
-        background-color:rgba(0, 0, 0, .4);
-    }
-
-    .carousel-control i {
-        color: #fff;
-        font-size: 2.4rem;
-    }
-</style>
-
-
-
-<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
-    
-    <div id="prev-cover" class="left waves-effect carousel-control">
-        <i class="icon fa fa-angle-left"></i>
-    </div>
-    <div id="next-cover" class="right waves-effect carousel-control">
-        <i class="icon fa fa-angle-right"></i>
-    </div>
-    
-
-    <div class="carousel-item red white-text bg-cover about-cover">
-        <div class="container">
-            <div class="row">
+<div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
@@ -320,7 +280,7 @@
 
             <div class="description center-align">
                 
-                    My life
+                    愿寻一山水间，看水听风随流水，再无凡尘乱我心。
                 
             </div>
         </div>
@@ -330,135 +290,8 @@
 // 每天切换 banner 图.  Switch banner image every day.
 $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
 </script>
-
-            <div class="cover-btns">
-                <a href="#indexCard" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
-                </a>
-
-                
-                <a href="https://github.com/duan2ping" class="waves-effect waves-light btn" target="_blank">
-                    <i class="fa fa-github-alt"></i>Github
-                </a>
-                
-            </div>
-            <div class="cover-social-link">
-    <a href="https://github.com/duan2ping/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fa fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:duan2ping@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fa fa-envelope-open"></i>
-    </a>
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1457273960" class="tooltipped" data-tooltip="QQ联系我: 1457273960" data-position="top" data-delay="50">
-        <i class="fa fa-qq"></i>
-    </a>
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fa fa-rss"></i>
-    </a>
+    </div>
 </div>
-        </div>
-    </div>
-
-    
-    
-
-    
-    
-    <div class="carousel-item amber white-text carousel-post bg-cover" style="background-image: url('/images/1.jpg');">
-        <div class="container">
-            <div class="row">
-                <div class="col s10 offset-s1">
-                    <div class="title center-align">Mylife</div>
-                    <div class="description center-align">
-                    
-                        这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
-                    
-                    </div>
-                    <div class="cover-btns">
-                        <a href="/2018/09/07/mylife/" class="waves-effect waves-light btn" target="_blank">
-                            <i class="icon fa fa-eye fa-fw"></i>阅读更多
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="carousel-item amber white-text carousel-post bg-cover" style="background-image: url('/images/1.jpg');">
-        <div class="container">
-            <div class="row">
-                <div class="col s10 offset-s1">
-                    <div class="title center-align">OSGI基础</div>
-                    <div class="description center-align">
-                    
-                        该文章是OSGI的基础概述，分析OSGI核心规范及相关知识点。
-                    
-                    </div>
-                    <div class="cover-btns">
-                        <a href="/2019/05/21/osgi-base/" class="waves-effect waves-light btn" target="_blank">
-                            <i class="icon fa fa-eye fa-fw"></i>阅读更多
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
-</div>
-
-<script>
-$(function () {
-    let coverSlider = $('.carousel');
-    coverSlider.carousel({
-        duration: Number('120'),
-        fullWidth: true,
-        indicators: 'true' === 'true'
-    });
-
-    let carouselIntervalId;
-    
-    // Loop to call the next cover article picture.
-    let autoCarousel = function() {
-        carouselIntervalId = setInterval(function () {
-            coverSlider.carousel('next');
-        }, 5000);
-    };
-    autoCarousel();
-    
-
-    let restartPlay = function () {
-        
-        clearInterval(carouselIntervalId);
-        autoCarousel();
-        
-    };
-
-    
-    // prev and next cover post.
-    $('#prev-cover').click(function () {
-        coverSlider.carousel('prev');
-        restartPlay();
-    });
-    $('#next-cover').click(function () {
-        coverSlider.carousel('next');
-        restartPlay();
-    });
-    
-});
-</script>
-
-
 
 <main class="content">
 
@@ -471,12 +304,12 @@ $(function () {
                         <div class="dream">
     
     <div class="title center-align">
-        <i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;我的梦想
+        <i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;引子
     </div>
     
     <div class="row">
         <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+            愿所有人都能在技术的世界里找到属于自己的归属。
         </div>
     </div>
 </div>
@@ -484,40 +317,6 @@ $(function () {
 
                     
 
-                    
-                        <link rel="stylesheet" href="/libs/dplayer/DPlayer.min.css">
-<div class="video-player">
-    
-    <div class="title center-align">
-        <i class="fa fa-video-camera"></i>&nbsp;&nbsp;精彩视频
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s12">
-            <div id="dplayer" class="dplayer-video"></div>
-        </div>
-    </div>
-</div>
-
-<script src="/libs/dplayer/DPlayer.min.js"></script>
-<script>
-    $(function () {
-        new DPlayer({
-            container: document.getElementById('dplayer'),
-            autoplay: 'false' === 'true',
-            theme: '#42b983',
-            loop: 'false' === 'true',
-            lang: 'zh-CN' === 'zh-CN' ? 'zh-cn' : 'en',
-            preload: 'auto',
-            volume: Number('0.7'),
-            video: {
-                url: 'https://tj-download.weiyun.com/ftn_handler/e462f5e5b205ca16e754b330cf5302fe55f5a36eb9bf6bfb96514199c33d15fd/taohuayuanji.mp4',
-                pic: '',
-                thumbnails: ''
-            }
-        });
-    });
-</script>
                     
 
                     <div id="recommend-sections" class="recommend">
@@ -558,7 +357,7 @@ $(function () {
     
     
     <div class="col s12 m6">
-        <div class="post-card" style="background-image: url('/source/images/xxx.jpg')">
+        <div class="post-card" style="background-image: url('medias/featureimages/15.jpg')">
             <div class="post-body">
                 <div class="post-categories">
                     
@@ -602,7 +401,7 @@ $(function () {
                     <a href="/2019/05/21/osgi-base/">
                         <div class="card-image">
                             
-                            <img src="/source/images/xxx.jpg" class="responsive-img" alt="OSGI基础">
+                            <img src="medias/featureimages/15.jpg" class="responsive-img" alt="OSGI基础">
                             
                             <span class="card-title">OSGI基础</span>
                         </div>
@@ -643,76 +442,6 @@ $(function () {
                         </a>
                         
                     </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4 overflow-policy" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2019/05/20/test/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="哈哈">
-                            
-                            <span class="card-title">哈哈</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-20
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-user fa-fw"></i>
-                                duan2ping
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4 overflow-policy" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2019/05/20/hello-world/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Hello World testeeeeee">
-                            
-                            <span class="card-title">Hello World testeeeeee</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-20
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-user fa-fw"></i>
-                                duan2ping
-                                
-                            </span>
-                        </div>
-                    </div>
-
                     
                 </div>
             </div>
@@ -777,30 +506,23 @@ $(function () {
 <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            本站由&copy;<a href="https://blinkfox.github.io/" target="_blank">duan2ping</a>基于
-            <a href="https://hexo.io/" target="_blank">Hexo</a> 的
-            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建.
+            本站基于 Hexo 的
+            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank"> hexo-theme-matery </a>主题搭建
+            &copy;2019<a href="https://duan2ping.github.io/" target="_blank"> duan2ping</a>
 
-            
-                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">11.2k</span>
-            
 
             
 			
                 <br>
                 
-                <span id="busuanzi_container_site_pv">
-                    <i class="fa fa-heart-o"></i>
-                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
-                </span>
-                
-                
                 <span id="busuanzi_container_site_uv">
-                    <i class="fa fa-users"></i>
-                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                    本站访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人
                 </span>
                 
+                 
+                                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                                <span class="white-color">11k</span>
+                            
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">

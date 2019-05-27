@@ -162,8 +162,13 @@ mark {
     margin-bottom: 0;
 }
 
+/*背景导航颜色*/
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    /*background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);*/
+    /*background-image: linear-gradient(to right, #424242 0%, #0f9d58 100%);*/
+    /*background-image: linear-gradient(to right, #000000 0%, #0f9d58 100%);*/
+    /*background-image: linear-gradient(to right, #00b0ff 0%, #0f9d58 100%);*/
+    background-image: linear-gradient(to right, #512da8 0%, #0f9d58 100%);
 }
 
 .text-color {
@@ -174,12 +179,13 @@ mark {
     color: #fff;
 }
 
+/* 底部进度条 */
 .progress-bar {
     height: 4px;
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background: linear-gradient(to right, #512da8 0%, #0f9d58 100%);
     opacity: 0.8;
 }
 
@@ -341,12 +347,12 @@ header .go-back i {
     line-height: 56px;
 }
 
-/* 背景图效果. */
+/* 头部图效果. */
 .bg-cover {
     position: relative;
     display: flex;
     align-items: center;
-    height: 60vh;
+    height: 45vh;
     padding: 0;
     border: 0;
     overflow: hidden;
@@ -404,7 +410,8 @@ header .go-back i {
     font-size: 1.9rem;
 }
 
-@-webkit-keyframes rainbow {
+/* 轮播图渐变色 */
+/*@-webkit-keyframes rainbow {
     0%,
     100% {
         background: rgba(156, 39, 176, 0.75);
@@ -442,9 +449,9 @@ header .go-back i {
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
     }
-}
+}*/
 
-@keyframes rainbow {
+/*@keyframes rainbow {
     0%,
     100% {
         background: rgba(156, 39, 176, 0.75);
@@ -482,7 +489,7 @@ header .go-back i {
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
     }
-}
+}*/
 
 .carousel .indicators {
     padding-bottom: 10px !important;
@@ -1412,11 +1419,11 @@ table tr:nth-child(2n), thead {
     max-width: 160px;
     width: 100%;
     margin: 0 auto;
-    transform: translate3d(0, -65%, 0);
+    transform: translate3d(0, -45%, 0);
 }
 
 .profile .author {
-    margin-top: -80px;
+    margin-top: -60px;
 }
 
 .profile .author .post-statis {

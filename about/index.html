@@ -27,7 +27,21 @@
         
     </style>
 
+
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+
+    <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
+
+   <script>
+   $(function(){
+       var sf = new Snowflakes({
+           color: "#ffffff",
+           count: 75,
+           minOpacity: 0.2,
+           maxOpacity: 0.6
+       });
+   });
+   </script>
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -119,7 +133,7 @@
         <div class="logo-name">DUAN2PING</div>
         <div class="logo-desc">
             
-            My life
+            愿寻一山水间，看水听风随流水，再无凡尘乱我心。
             
         </div>
     </div>
@@ -253,13 +267,6 @@
 
 </header>
 
-<style type="text/css">
-    /* don't remove. */
-    .about-cover {
-        height: 75vh;
-    }
-</style>
-
 <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
@@ -273,7 +280,7 @@
 
             <div class="description center-align">
                 
-                    My life
+                    愿寻一山水间，看水听风随流水，再无凡尘乱我心。
                 
             </div>
         </div>
@@ -295,7 +302,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/" target="_blank">4</a></span>
+    <span class="count"><a href="/" target="_blank">2</a></span>
     <span class="name">文章</span>
 </div>
 
@@ -323,7 +330,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/" target="_blank">4</a></span>
+    <span class="count"><a href="/" target="_blank">2</a></span>
     <span class="name">文章</span>
 </div>
 
@@ -343,7 +350,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
                                 </div>
                                 <div class="title">duan2ping</div>
-                                <div class="career">Software Engineer</div>
+                                <div class="career">山卡卡里的码农</div>
                                 <div class="social-link hide-on-large-only" data-aos="zoom-in-left">
                                     
     <a href="https://github.com/duan2ping/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
@@ -401,7 +408,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                     </div>
                 </div>
 
-                <div class="introduction center-align" data-aos="fade-up">If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.</div>
+                <div class="introduction center-align" data-aos="fade-up">愿寻一山水间，看水听风随流水，再无凡尘乱我心。</div>
 
                 <style type="text/css">
     #posts-chart,
@@ -462,7 +469,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,1,0,0,0,0,0,0,0,3],
+                data: [0,0,0,0,1,0,0,0,0,0,0,0,1],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -780,30 +787,23 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            本站由&copy;<a href="https://blinkfox.github.io/" target="_blank">duan2ping</a>基于
-            <a href="https://hexo.io/" target="_blank">Hexo</a> 的
-            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建.
+            本站基于 Hexo 的
+            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank"> hexo-theme-matery </a>主题搭建
+            &copy;2019<a href="https://duan2ping.github.io/" target="_blank"> duan2ping</a>
 
-            
-                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">11.2k</span>
-            
 
             
 			
                 <br>
                 
-                <span id="busuanzi_container_site_pv">
-                    <i class="fa fa-heart-o"></i>
-                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
-                </span>
-                
-                
                 <span id="busuanzi_container_site_uv">
-                    <i class="fa fa-users"></i>
-                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                    本站访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人
                 </span>
                 
+                 
+                                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                                <span class="white-color">11k</span>
+                            
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
