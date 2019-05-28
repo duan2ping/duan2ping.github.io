@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>DUAN2PING</title>
+  <title>山间茅屋</title>
   
   <subtitle>DUAN2PING</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-27T09:18:48.438Z</updated>
+  <updated>2019-05-28T11:16:49.765Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>duan2ping</name>
+    <name>山间茅屋</name>
     
   </author>
   
@@ -18,10 +18,280 @@
   
   <entry>
     <title>OSGI基础</title>
+    <link href="http://yoursite.com/2019/05/21/osgi-base4/"/>
+    <id>http://yoursite.com/2019/05/21/osgi-base4/</id>
+    <published>2019-05-21T01:25:00.000Z</published>
+    <updated>2019-05-28T11:16:49.765Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;SGI技术的demo&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;愿各位猿友在技术中觅得归处，源于生活而归于生活。
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;项目架构&quot;&gt;&lt;a href=&quot;#项目架构&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="OSGI" scheme="http://yoursite.com/categories/OSGI/"/>
+    
+    
+      <category term="OSGI" scheme="http://yoursite.com/tags/OSGI/"/>
+    
+      <category term="JAVA模块化" scheme="http://yoursite.com/tags/JAVA%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OSGI基础</title>
+    <link href="http://yoursite.com/2019/05/21/osgi-base9/"/>
+    <id>http://yoursite.com/2019/05/21/osgi-base9/</id>
+    <published>2019-05-21T01:25:00.000Z</published>
+    <updated>2019-05-28T11:17:34.174Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;SGI技术的demo&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;愿各位猿友在技术中觅得归处，源于生活而归于生活。
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;项目架构&quot;&gt;&lt;a href=&quot;#项目架构&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="OSGI" scheme="http://yoursite.com/categories/OSGI/"/>
+    
+    
+      <category term="OSGI" scheme="http://yoursite.com/tags/OSGI/"/>
+    
+      <category term="JAVA模块化" scheme="http://yoursite.com/tags/JAVA%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OSGI基础</title>
+    <link href="http://yoursite.com/2019/05/21/osgi-base1/"/>
+    <id>http://yoursite.com/2019/05/21/osgi-base1/</id>
+    <published>2019-05-21T01:25:00.000Z</published>
+    <updated>2019-05-28T11:16:13.812Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;SGI技术的demo&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;愿各位猿友在技术中觅得归处，源于生活而归于生活。
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;项目架构&quot;&gt;&lt;a href=&quot;#项目架构&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="OSGI" scheme="http://yoursite.com/categories/OSGI/"/>
+    
+    
+      <category term="OSGI" scheme="http://yoursite.com/tags/OSGI/"/>
+    
+      <category term="JAVA模块化" scheme="http://yoursite.com/tags/JAVA%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OSGI基础</title>
+    <link href="http://yoursite.com/2019/05/21/osgi-base2/"/>
+    <id>http://yoursite.com/2019/05/21/osgi-base2/</id>
+    <published>2019-05-21T01:25:00.000Z</published>
+    <updated>2019-05-28T11:16:31.077Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;SGI技术的demo&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;愿各位猿友在技术中觅得归处，源于生活而归于生活。
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;项目架构&quot;&gt;&lt;a href=&quot;#项目架构&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="OSGI" scheme="http://yoursite.com/categories/OSGI/"/>
+    
+    
+      <category term="OSGI" scheme="http://yoursite.com/tags/OSGI/"/>
+    
+      <category term="JAVA模块化" scheme="http://yoursite.com/tags/JAVA%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OSGI基础</title>
+    <link href="http://yoursite.com/2019/05/21/osgi-base3/"/>
+    <id>http://yoursite.com/2019/05/21/osgi-base3/</id>
+    <published>2019-05-21T01:25:00.000Z</published>
+    <updated>2019-05-28T11:16:39.061Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;SGI技术的demo&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;愿各位猿友在技术中觅得归处，源于生活而归于生活。
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;项目架构&quot;&gt;&lt;a href=&quot;#项目架构&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="OSGI" scheme="http://yoursite.com/categories/OSGI/"/>
+    
+    
+      <category term="OSGI" scheme="http://yoursite.com/tags/OSGI/"/>
+    
+      <category term="JAVA模块化" scheme="http://yoursite.com/tags/JAVA%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OSGI基础</title>
     <link href="http://yoursite.com/2019/05/21/osgi-base/"/>
     <id>http://yoursite.com/2019/05/21/osgi-base/</id>
     <published>2019-05-21T01:25:00.000Z</published>
-    <updated>2019-05-27T09:18:48.438Z</updated>
+    <updated>2019-05-28T11:18:02.983Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;SGI技术的demo&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;愿各位猿友在技术中觅得归处，源于生活而归于生活。
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;项目架构&quot;&gt;&lt;a href=&quot;#项目架构&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="OSGI" scheme="http://yoursite.com/categories/OSGI/"/>
+    
+    
+      <category term="OSGI" scheme="http://yoursite.com/tags/OSGI/"/>
+    
+      <category term="JAVA模块化" scheme="http://yoursite.com/tags/JAVA%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OSGI基础</title>
+    <link href="http://yoursite.com/2019/05/21/osgi-base5/"/>
+    <id>http://yoursite.com/2019/05/21/osgi-base5/</id>
+    <published>2019-05-21T01:25:00.000Z</published>
+    <updated>2019-05-28T11:16:58.373Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;SGI技术的demo&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;愿各位猿友在技术中觅得归处，源于生活而归于生活。
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;项目架构&quot;&gt;&lt;a href=&quot;#项目架构&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="OSGI" scheme="http://yoursite.com/categories/OSGI/"/>
+    
+    
+      <category term="OSGI" scheme="http://yoursite.com/tags/OSGI/"/>
+    
+      <category term="JAVA模块化" scheme="http://yoursite.com/tags/JAVA%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OSGI基础</title>
+    <link href="http://yoursite.com/2019/05/21/osgi-base6/"/>
+    <id>http://yoursite.com/2019/05/21/osgi-base6/</id>
+    <published>2019-05-21T01:25:00.000Z</published>
+    <updated>2019-05-28T11:17:05.646Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;SGI技术的demo&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;愿各位猿友在技术中觅得归处，源于生活而归于生活。
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;项目架构&quot;&gt;&lt;a href=&quot;#项目架构&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="OSGI" scheme="http://yoursite.com/categories/OSGI/"/>
+    
+    
+      <category term="OSGI" scheme="http://yoursite.com/tags/OSGI/"/>
+    
+      <category term="JAVA模块化" scheme="http://yoursite.com/tags/JAVA%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OSGI基础</title>
+    <link href="http://yoursite.com/2019/05/21/osgi-base7/"/>
+    <id>http://yoursite.com/2019/05/21/osgi-base7/</id>
+    <published>2019-05-21T01:25:00.000Z</published>
+    <updated>2019-05-28T11:17:15.838Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;SGI技术的demo&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;愿各位猿友在技术中觅得归处，源于生活而归于生活。
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;项目架构&quot;&gt;&lt;a href=&quot;#项目架构&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="OSGI" scheme="http://yoursite.com/categories/OSGI/"/>
+    
+    
+      <category term="OSGI" scheme="http://yoursite.com/tags/OSGI/"/>
+    
+      <category term="JAVA模块化" scheme="http://yoursite.com/tags/JAVA%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OSGI基础</title>
+    <link href="http://yoursite.com/2019/05/21/osgi-base8/"/>
+    <id>http://yoursite.com/2019/05/21/osgi-base8/</id>
+    <published>2019-05-21T01:25:00.000Z</published>
+    <updated>2019-05-28T11:17:24.726Z</updated>
     
     <summary type="html">
     
@@ -51,7 +321,7 @@
     <link href="http://yoursite.com/2018/09/07/mylife/"/>
     <id>http://yoursite.com/2018/09/07/mylife/</id>
     <published>2018-09-07T01:25:00.000Z</published>
-    <updated>2019-05-27T05:36:32.192Z</updated>
+    <updated>2019-05-28T11:15:58.404Z</updated>
     
     <summary type="html">
     
