@@ -4,8 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Mylife, 山间茅屋">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="Java SPI机制, 山间茅屋">
+    <meta name="description" content="Java SPI机制概述：SPI全称Service Provider Interface，是Java提供的一套用来被第三方实现或者扩展的API，JDK内置的一种服务提供发现机制。
+描述：Java SPI 实际上是“基于接口的编程＋策略模式＋">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Mylife | 山间茅屋</title>
+    <title>Java SPI机制 | 山间茅屋</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -297,10 +298,99 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/test5.jpeg)');
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -309,12 +399,12 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/test5.jpeg)');
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Mylife/" target="_blank">
-                                <span class="chip bg-color">Mylife</span>
+                            <a href="/tags/Java/" target="_blank">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
-                            <a href="/tags/Markdown/" target="_blank">
-                                <span class="chip bg-color">Markdown</span>
+                            <a href="/tags/SPI/" target="_blank">
+                                <span class="chip bg-color">SPI</span>
                             </a>
                         
                     </div>
@@ -325,8 +415,8 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/test5.jpeg)');
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/分类/" class="post-category" target="_blank">
-                                分类
+                            <a href="/categories/Java/" class="post-category" target="_blank">
+                                Java
                             </a>
                         
                     </div>
@@ -337,21 +427,21 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/test5.jpeg)');
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2018-09-07
+                    2019-05-21
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        73
+                        1.3k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        4 分
                     </div>
                     
                 
@@ -367,19 +457,28 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/test5.jpeg)');
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h2 id="Java-SPI机制"><a href="#Java-SPI机制" class="headerlink" title="Java SPI机制"></a>Java SPI机制</h2><p><strong>概述</strong>：SPI全称Service Provider Interface，是Java提供的一套用来被第三方实现或者扩展的API，JDK内置的一种服务提供发现机制。</p>
+<p><strong>描述</strong>：Java SPI 实际上是“基于接口的编程＋策略模式＋配置文件”组合实现的动态加载机制。<br>系统设计的各个抽象，往往有很多不同的实现方案，在面向的对象的设计里，一般推荐模块之间基于接口编程，模块之间不对实现类进行硬编码。一旦代码里涉及具体的实现类，就违反了可拔插的原则，如果需要替换一种实现，就需要修改代码。为了实现在模块装配的时候能不在程序里动态指明，这就需要一种服务发现机制。Java SPI就是提供这样的一个机制：是一种将服务接口与服务实现分离以达到解耦、大大提升了程序可扩展性的机制。引入服务提供者就是引入了spi接口的实现者，通过本地的注册发现获取到具体的实现类，轻松可插拔。所以SPI的核心思想就是解耦。</p>
+<p><img src="https://github.com/duan2ping/world/blob/master/myblog/java-spi-model.png?raw=true" alt="JavaSPI"></p>
+<h3 id="理解并分析"><a href="#理解并分析" class="headerlink" title="理解并分析"></a>理解并分析</h3><p><strong>常见实现</strong>：目前市面上有很多框架都是用它来做服务的扩展发现，JDBC、JCE、JNDI、JAXP和JBI等。</p>
+<p><strong>理解</strong>： 底层系统的动态服务实现。</p>
+<p><strong>需求</strong>：系统需要调用实现类。我们知道作为底层系统，我们只提供了约定的API服务。具体实现由使用者提供。我们希望在系统启动时动态获取到服务的实现、而不通过硬编码方式。</p>
+<p><strong>目的</strong>：实现运行时动态发现并加载服务。</p>
+<p><strong>分析</strong>：不管怎么实现，肯定得知道服务的实现类。那问题就在怎么知道服务实现类，又不耦合。我们知道在分布式系统中我们经常是将服务的实现注册到注册中心。使用时从注册中心取到具体实现的服务。从而达到服务和服务实现的解耦。但是我们现在说的是底层系统，没有注册中心。我们平时大部分做的项目都是上层服务系统，都是利用各种rpc，分布式协调服务来实现这种动态服务。而jdk作为高度抽象的底层系统，没有那些乱七八糟的各种框架又是怎么实现动态服务的呢？</p>
+<p><strong>实现</strong>：我们约定一个服务注册的地方，获取时从这个地方获取。这就是注册中心的概念。spi也可以这么理解。我们约定统一将服务放在META-INF/services，添加一个文件，文件名为服务全类名，内容为具体实现全类名。这样系统启动时就能从这个地方去查寻指定的服务实现。</p>
+<ul>
+<li><p>SPI约定：要使用Java SPI，需要遵循如下约定</p>
+<ul>
+<li>当服务提供者提供了接口的一种具体实现后，在jar包的META-INF/services目录下创建一个以“接口全限定名”为命名的文件，内容为实现类的全限定名；</li>
+<li>接口实现类所在的jar包放在主程序的classpath中；</li>
+<li>主程序通过java.util.ServiceLoder动态装载实现模块，它通过扫描META-INF/services目录下的配置文件找到实现类的全限定名，把类加载到JVM；</li>
+<li>SPI的实现类必须携带一个不带参数的构造方法；</li>
+</ul>
+</li>
+</ul>
+<p><strong>总结</strong>：SPI是jdk核心类实现动态服务发现机制。程序启动时ServiceLoader通过load来动态加载指定的服务实现。实现服务接口和服务实现的解耦。</p>
+<p><strong>问题</strong>：SPI是ServiceLoader来加载服务实现类。那么问题来了。它是JDK核心类库中的类，根据类加载机制可知，它是被Bootstrap Classloader加载，Bootstrap Classloader主要负责加载%JAVA_HOME%/jre/lib,-Xbootclasspath参数指定的路径以及%JAVA_HOME%/jre/classes中的类。而服务的实现类是第三方jar提供的，在classpath中Bootstrap Classloader肯定找不到。再由双亲委托机制可知，如果它找不到指定类那就委托父加载器加载。我们知道Bootstrap Classloader已经是最顶层的类加载器。不可能加载到实现类，那SPI是如何实现的呢？</p>
+<h3 id="破坏双亲委派类加载机制"><a href="#破坏双亲委派类加载机制" class="headerlink" title="破坏双亲委派类加载机制"></a>破坏双亲委派类加载机制</h3><p><strong>结论</strong>：从上面的问题我们得出，SPI服务实现通过Java默认推荐的双亲委托机制加载是不可行的。SPI服务API在jdk核心库中由Bootstrap Classloader加载，而服务实现是第三方提   供的在AppClassLoader类加载的路径中。那是不是可以让AppClassLoader来加载呢？这是必然的，它肯定能加载。但是违反了Java默认推荐的双亲委派加载机制。没办法，得到好的东西总是要有些付出的。那么SPI最终的实现就是，Bootstrap Classloader委托AppClassLoader去加载服务实现。</p>
 
             </div>
             <hr>
@@ -535,10 +634,10 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/test5.jpeg)');
             </div>
             <br>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
-                    《Mylife》
+                    《Java SPI机制》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2018/09/07/mylife/" property="cc:attributionName" rel="cc:attributionURL">
-                duan2ping
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/05/21/java-spi/" property="cc:attributionName" rel="cc:attributionURL">
+                山卡卡里的码农
             </a> 采用
             <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
                 知识共享署名 4.0 国际许可协议
@@ -577,7 +676,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/test5.jpeg)');
         repo: 'duan2ping.github.io',
         owner: 'duan2ping',
         admin: ["duan2ping"],
-        id: '2018-09-07T09-25-00',
+        id: '2019-05-21T09-25-00',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -602,7 +701,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/test5.jpeg)');
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/05/21/osgi-base8/">
+                <a href="/2019/05/21/osgi-base4/">
                     <div class="card-image">
                         
                         <img src="medias/featureimages/15.jpg" class="responsive-img" alt="OSGI基础">
@@ -651,49 +750,48 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/test5.jpeg)');
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2018/09/07/mylife/">
+                <a href="/2019/05/21/osgi-base/">
                     <div class="card-image">
                         
-                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="Mylife">
+                        <img src="medias/featureimages/15.jpg" class="responsive-img" alt="OSGI基础">
                         
-                        <span class="card-title">Mylife</span>
+                        <span class="card-title">OSGI基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这是你自定义的文章摘要内容,自动截取文章的部分内容作为摘要
+                            该文章是OSGI的基础概述，分析OSGI核心规范及相关知识点。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-09-07
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-21
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/分类/" class="post-category" target="_blank">
-                                    分类
+                            <a href="/categories/OSGI/" class="post-category" target="_blank">
+                                    OSGI
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Mylife/" target="_blank">
-                        <span class="chip bg-color">Mylife</span>
+                    <a href="/tags/OSGI/" target="_blank">
+                        <span class="chip bg-color">OSGI</span>
                     </a>
                     
-                    <a href="/tags/Markdown/" target="_blank">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/JAVA模块化/" target="_blank">
+                        <span class="chip bg-color">JAVA模块化</span>
                     </a>
                     
                 </div>
@@ -744,6 +842,99 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/test5.jpeg)');
 </script>
 
 
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1,h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1,h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
     
 
 </main>
